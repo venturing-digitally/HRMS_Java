@@ -1,10 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+   th:replace="base::Layout(~{::section})">
 <head>
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
+
 </head>
 <body>
-<h1>Login Page</h1>
+
+<section>
+<div class="container p-5">
+<div class="col-md-6 offset-md-3">
+<div class="card">
+<div class="card-header text-center fs-4">Login Page</div>
+
+<div class="card-body">
+<form>
+
+
+
+<div class="mb-3">
+<label>Enter Email</label><input type="text" 
+name="email" class="form-control">
+</div>
+
+<div class="mb-3">
+<label>Enter Password</label><input type="text" 
+name="password" class="form-control">
+</div>
+<button class="btn btn-primary col-md-12">Login</button>
+
+<button class="btn btn-primary col-md-18">Company Login</button>
+
+<button class="btn btn-primary col-md-18">Employee Login</button>
+
+<button class="btn btn-primary col-md-18">HR Login</button>
+
+
+</form>
+</div>
+</div>
+</div>
+</div>
+
+</section>
+
+<h1> Login Page </h1>
 </body>
 </html>

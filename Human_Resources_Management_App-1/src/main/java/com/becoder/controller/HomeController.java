@@ -1,4 +1,6 @@
-package com.example.controller;
+package com.becoder.controller;
+
+
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -6,8 +8,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 
-import com.example.Service.UserService;
-import com.example.model.UserDtls;
+import com.becoder.model.UserDtls;
+import com.becoder.service.UserService;
 
 import jakarta.servlet.http.HttpSession;
 
@@ -33,7 +35,7 @@ public class HomeController {
 	}
 
 	@PostMapping("/createUser")
-	public String createuser(@ModelAttribute UserDtls user, HttpSession session) {
+	public String createuser(@ModelAttribute UserDtls user,HttpSession  session) {
 
 		// System.out.println(user);
 
@@ -41,7 +43,9 @@ public class HomeController {
 
 		if (f) {
 			session.setAttribute("msg", "Email Id alreday exists");
-		} else {
+		}
+
+		else {
 			UserDtls userDtls = userService.createUser(user);
 			if (userDtls != null) {
 				session.setAttribute("msg", "Register Sucessfully");
