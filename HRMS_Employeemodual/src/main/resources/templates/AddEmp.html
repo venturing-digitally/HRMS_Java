@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.com">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+	    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Manage Employee</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+  s aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index">Home <span class="sr-only"></span></a>
+      </li>
+   </ul>
+  
+  </div>
+</nav>
+    <!--Navbar-->
+    </div>
+	<contener>
+	<!--Form-->
+		<div class="card-body">
+							<form th:action="@{/addemp}" method="post">
+								<div class="mb-3"> 
+									<h1>PERSONAL DETAILS</h1>
+									<label>Name</label> <input type="text"
+										name="Name" class="form-control">
+								</div>
+								<div class="mb-3">
+									<label>Phone NO</label> <input type="number" name="PhoneNo"
+										class="form-control">
+								</div>
+								
+								<div class="mb-3">
+									<label>Date Of Barth</label> <input type="text" name="Date_of_Birth"
+										class="form-control">
+								</div>
+
+								<div class="mb-3">
+									<label>Gender</label> <input type="text" name="Gender"
+										class="form-control">
+								</div>
+								<div class="mb-3">
+									<label>Email</label> <input type="Email"
+										name="Email" class="form-control">
+								</div>
+								<div class="mb-3">
+									<label>Password</label> <input type="text"
+										name="Password" class="form-control">
+								</div>
+								<div class="mb-3">
+									<label>Address</label> <input type="text"
+										name="Address" class="form-control">
+								</div>
+													<h1>COMPANY DETAIL</h1>
+									<label>SelectBranch</label> <input type="text"
+										name="SelectBranch" class="form-control">
+								</div>
+								<div class="mb-3">
+									<label>Department</label> <input type="text" name="Department"
+										class="form-control">
+								</div>
+								
+								<div class="mb-3">
+									<label>Select Designation</label> <input type="text" name="SelectDesignation"
+										class="form-control">
+								</div>
+
+								<div class="mb-3">
+									<label>Company Date Of Joining</label> <input type="text" name="CompanyDateOfJoining"
+										class="form-control">
+								</div>
+										<h1>BANK ACCOUNT DETAILS</h1>
+									<label>Account Holder Name</label> <input type="text"
+										name="AccountHolderName" class="form-control">
+								</div>
+								<div class="mb-3">
+									<label>Account Number</label> <input type="text" name="AccountNumber"
+										class="form-control">
+								</div>
+								
+								<div class="mb-3">
+									<label>Bank Name</label> <input type="text" name="BankName"
+										class="form-control">
+								</div>
+
+								<div class="mb-3">
+									<label>Bank Identifier Code</label> <input type="text" name="BankIdentifierCode"
+										class="form-control">
+								</div>
+								<div class="mb-3">
+									<label>Branch Location</label> <input type=""text
+										name="BranchLocation" class="form-control">
+								</div>
+								<div class="mb-3">
+									<label>Tax Payer Id</label> <input type="text"
+										name="TaxPayerId" class="form-control">
+								</div>
+								<button class="btn btn-primary col-md-12">CREATE</button>
+							</form>
+						</div>
+						</contener>
+</body>
+</html>

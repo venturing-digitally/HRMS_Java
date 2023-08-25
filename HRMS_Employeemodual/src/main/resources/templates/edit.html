@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.com">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<div>
+	    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">Manage Employee</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+  s aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="/">Home <span class="sr-only"></span></a>
+      </li>
+   </ul>
+  
+  </div>
+</nav>
+    <!--Navbar-->
+    </div>
+	<contener>
+	<!--Form-->
+		<div class="card-body">
+			<h1>Personal Details</h1>
+							<form th:action="@{/addemp}" method="post" th:object="${emp}">
+								<input type ="hidden"th:value="${emp.id}"th:object="${emp}" name="id">
+								<div class="mb-3"> 
+									<label>Name</label> <input type="text"
+										name="Name"th:value="${emp.Name}"
+										 class="form-control">
+								</div>
+								<div class="mb-3">
+									<label>Phone NO</label> <input type="number" name="PhoneNo" th:value="${emp.PhoneNo}"
+										class="form-control">
+								</div>
+								
+								<div class="mb-3">
+									<label>Date Of Barth</label> <input type="text" name="Date_of_Birth" th:value="${emp.Date_of_Birth}"
+										class="form-control">
+								</div>
+
+								<div class="mb-3">
+									<label>Gender</label> <input type="text" name="Gender"th:value=${emp.Gender}
+										class="form-control">
+								</div>
+								
+								<div class="mb-3">
+									<label>Address</label> <input type="text"
+										name="Address"th:value=${emp.Address} class="form-control">
+								</div>
+								<h1>Company Detail</h1>
+										<div class="mb-3"> 
+									<label>SelectBranch</label> <input type="text"
+										name="SelectBranch"th:value="${emp.SelectBranch}"
+										 class="form-control">
+								</div>
+								<div class="mb-3">
+									<label>Department</label> <input type="text" name="Department" th:value="${emp.Department}"
+										class="form-control">
+								</div>
+								
+								<div class="mb-3">
+									<label>SelectDesignation</label> <input type="text" name="SelectDesignation" th:value="${emp.SelectDesignation}"
+										class="form-control">
+								</div>
+
+								<div class="mb-3">
+									<label>CompanyDateOfJoining</label> <input type="text" name="CompanyDateOfJoining"th:value=${emp.CompanyDateOfJoining}
+										class="form-control">
+								</div>
+								
+								<h1>Bank Account Detail</h1>
+													<div class="mb-3"> 
+									<label>AccountHolderName</label> <input type="text"
+										name="AccountHolderName"th:value="${emp.AccountHolderName}"
+										 class="form-control">
+								</div>
+								<div class="mb-3">
+									<label>AccountNumber</label> <input type="number" name="AccountNumber" th:value="${emp.AccountNumber}"
+										class="form-control">
+								</div>
+								
+								<div class="mb-3">
+									<label>BankName</label> <input type="text" name="BankName" th:value="${emp.BankName}"
+										class="form-control">
+								</div>
+
+								<div class="mb-3">
+									<label>BankIdentifierCode</label> <input type="text" name="BankIdentifierCode"th:value=${emp.BankIdentifierCode}
+										class="form-control">
+								</div>
+								
+								<div class="mb-3">
+									<label>BranchLocation</label> <input type="text"
+										name="BranchLocation"th:value=${emp.BranchLocation} class="form-control">
+								</div>
+								<div class="mb-3">
+									<label>TaxPayerId</label> <input type="text"
+										name="TaxPayerId"th:value=${emp.TaxPayerId} class="form-control">
+								</div>
+								<button class="btn btn-primary col-md-12">UPDATE</button>
+							</form>
+						</div>
+						<!--Form-->
+		</contener>
+</body>
+</html>

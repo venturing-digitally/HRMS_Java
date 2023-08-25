@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.com">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Create Loan</h1>
+<Container>
+		<form th:action="@{/LoanAdd}" method="post">
+	<div class="mb-3">
+	<label>Title</label> <input type="text"name="Title"
+		class="form-control">
+	</div>
+	<label>LoanOption</label> <input type="text"name="loanoption"
+		class="form-control">
+	</div>
+	<label>Type</label> <input type="text"name="Type"
+		class="form-control">
+	</div>
+
+	<div class="mb-3">
+	<label>Loan Amount</label> <input type="text" name="loanamount"
+	class="form-control">
+    </div>
+    <div class="mb-3">
+	<label>Reason</label> <input type="text" name="reason"
+	class="form-control">
+    </div>
+    <button class="btn btn-primary col-md-12">Save</button>
+      <button class="btn btn-primary col-md-12">Cancel</button>
+		</form>
+    </Container>
+</body>
+</html>

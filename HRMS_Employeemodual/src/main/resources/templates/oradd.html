@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.com">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Create Overtime</h1>
+<Container>
+		<form th:action="@{/OvertimeAdd}" method="post">
+	<div class="mb-3">
+	<label>OverTime Title</label> <input type="text"name="overtimetitle"
+		class="form-control">
+	</div>
+	<label>Number Of Days</label> <input type="text"name="numberofdays"
+		class="form-control">
+	</div>
+	<label>Hours</label> <input type="text"name="hours"
+		class="form-control">
+	</div>
+
+	<div class="mb-3">
+	<label>Rate</label> <input type="text" name="rate"
+	class="form-control">
+    </div>
+    <button class="btn btn-dark col-md-12">Save</button>
+      <button class="btn btn-primary col-md-12">Cancel</button>
+		</form>
+    </Container>
+</body>
+</html>

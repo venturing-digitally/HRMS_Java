@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.com">
+<head>
+  <head>
+	    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+	   <title>View Page</title>
+  </head>
+</head>
+<body>
+	<container>
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" calss="bg-info w-50">Employee Salary</a>
+<a class="navbar-brand" calss="bg-info w-50"  href="sadd">+</a>
+        <!--<a calss="navbar-brand" class="nav-link" href="sadd">Add</a>-->
+</nav>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">Payslip Type</th>
+      <th scope="col">Salary</th>
+    
+    </tr>
+  </thead>
+  <tbody>
+    <tr th:each="e : ${emp}">
+      <td th:text="${e.PayslipType}"></td>
+      <td th:text="${e.Salary}"></td>
+      
+    </tr>
+
+   
+  </tbody>
+</table>
+	</container>
+	
+                              <!--Allowence-->
+	    <div calss="container">
+	 
+<table class="table table-striped">
+  <thead>
+    <tr>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" calss="bg-info w-50">Allowence</a>
+  <form class="form-inline">
+    
+   <a class="navbar-brand" calss="bg-info w-50"  href="aadd">+</a>
+  </form>
+</nav>
+      <th scope="col">EmplyeeName</th>
+      <th scope="col">Allowence option</th>
+      <th scope="col">Title</th>
+      <th scope="col">Type</th>
+      <th scope="col">Ammount</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+          <td><a class="btn btn-sm btn-primary" href="/view">View</a>
+          <td><a class="btn btn-sm btn-primary" href="/view">Delete</a>
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+    </div>
+    
+                      <!--Commission-->   
+     
+     <div calss="container">
+	 <table class="table table-striped">
+  <thead>
+    <tr>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" calss="bg-info w-50">Commission</a>
+  <form class="form-inline">
+    
+    <a class="navbar-brand" calss="bg-info w-50" href="cadd">+</a>
+  </form>
+</nav>
+      <th scope="col">EmplyeeName</th>
+      <th scope="col">Title</th>
+      <th scope="col">Type</th>
+      <th scope="col">Ammount</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+          <td><a class="btn btn-sm btn-primary" href="/view">View</a>
+          <td><a class="btn btn-sm btn-primary" href="/view">Delete</a>
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+    </div>
+    
+                      <!--Loan-->
+                      
+    	    <div calss="container">
+	 
+<table class="table table-striped">
+  <thead>
+    <tr>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" calss="bg-info w-50">Loan</a>
+  <form class="form-inline">
+    
+  <a class="navbar-brand" calss="bg-info w-50" href="ladd">+</a>
+  </form>
+</nav>
+      <th scope="col">EmplyeeName</th>
+      <th scope="col">Loan option</th>
+      <th scope="col">Title</th>
+      <th scope="col">Type</th>
+      <th scope="col">Loan Ammount</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+          <td><a class="btn btn-sm btn-primary" href="/view">View</a>
+          <td><a class="btn btn-sm btn-primary" href="/view">Delete</a>
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+    </div>
+    
+                      <!--Saturation Deduction-->
+    	    <div calss="container">
+	 
+<table class="table table-striped">
+  <thead>
+    <tr>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" calss="bg-info w-50">Saturation Deduction</a>
+  <form class="form-inline">
+    
+   <a class="navbar-brand" calss="bg-info w-50"  href="sdadd">+</a>
+  </form>
+</nav>
+      <th scope="col">EmplyeeName</th>
+      <th scope="col">Deduction option</th>
+      <th scope="col">Title</th>
+      <th scope="col">Type</th>
+      <th scope="col">Loan Ammount</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+          <td><a class="btn btn-sm btn-primary" href="/view">View</a>
+          <td><a class="btn btn-sm btn-primary" href="/view">Delete</a>
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+    </div>
+
+                       <!--Other Payment-->
+                           	    <div calss="container">
+	 
+<table class="table table-striped">
+  <thead>
+    <tr>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" calss="bg-info w-50">Other Payment</a>
+  <form class="form-inline">
+    
+    <a class="navbar-brand" calss="bg-info w-50"  href="oadd">+</a>
+  </form>
+</nav>
+      <th scope="col">EmplyeeName</th>
+      <th scope="col">Title</th>
+      <th scope="col">Type</th>
+      <th scope="col">Loan Ammount</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+          <td><a class="btn btn-sm btn-primary" href="/view">View</a>
+          <td><a class="btn btn-sm btn-primary" href="/view">Delete</a>
+      </td>
+    </tr>
+  
+  </tbody>
+</table>
+    </div>
+    
+                    <!--OVERTIME-->
+ <div calss="container">
+	 <table class="table table-striped">
+  <thead>
+    <tr>
+		<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" calss="bg-info w-50">Overtime</a>
+  <form class="form-inline">
+    
+   <a class="navbar-brand" calss="bg-info w-50"  href="oradd">+</a>
+  </form>
+</nav>
+      <th scope="col">EmplyeeName</th>
+      <th scope="col">OvertimeTitle</th>
+      <th scope="col">Number OF Days</th>
+      <th scope="col">Hours</th>
+      <th scope="col">Rate</th>
+      <th scope="col">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Otto</td>
+      <td>@mdo</td>
+      <td>@mdo</td>
+          <td><a class="btn btn-sm btn-primary" href="/view">View</a>
+          <td><a class="btn btn-sm btn-primary" href="/view">Delete</a>
+      </td>
+    </tr>
+</tbody>
+</table>
+    </div>
+</body>
+</html>

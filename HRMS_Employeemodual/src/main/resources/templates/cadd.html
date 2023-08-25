@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.com">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+<h1>Create Commission</h1>
+	<Container>
+		<form th:action="@{/CommissionAdd}" method="post">
+
+	<label>Title</label> <input type="text"name="Title"
+		class="form-control">
+	</div>
+	<label>Type</label> <input type="text"name="Type"
+		class="form-control">
+	</div>
+
+	<div class="mb-3">
+	<label>Amount</label> <input type="text" name="Amount"
+	class="form-control">
+    </div>
+    <button class="btn btn-primary col-md-12">Save</button>
+      <button class="btn btn-primary col-md-12">Cancel</button>
+		</form>
+    </Container>
+</body>
+</html>

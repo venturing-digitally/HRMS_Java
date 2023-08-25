@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymleaf.com">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<hi>Set Basic Salary</hi>
+	<Container>
+		<form th:action="@{/salaryAdd}" method="post">
+	<div class="mb-3">
+	<label>Payslip Type</label> <input type="text"name="PayslipType"
+		class="form-control">
+	</div>
+
+	<div class="mb-3">
+	<label>Salary</label> <input type="text" name="Salary"
+	class="form-control">
+    </div>
+    <button class="btn btn-primary col-md-12">Save</button>
+      <button class="btn btn-primary col-md-12">Cancel</button>
+		</form>
+    </Container>
+</body>
+</html>
