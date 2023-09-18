@@ -1,6 +1,6 @@
 package com.HRMS.model;
 
-import java.util.Date;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -17,9 +17,16 @@ public class Award {
 	private String Employee;
 	private String AwardType;
 	private String Gift;
-	private Date Date;
+	private String Date;
 	private String Descripation;
 	
+	
+	
+	
+	public Award() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public int getId() {
 		return Id;
 	}
@@ -44,10 +51,10 @@ public class Award {
 	public void setGift(String gift) {
 		Gift = gift;
 	}
-	public Date getDate() {
+	public String getDate() {
 		return Date;
 	}
-	public void setDate(Date date) {
+	public void setDate(String date) {
 		Date = date;
 	}
 	public String getDescripation() {
@@ -56,5 +63,16 @@ public class Award {
 	public void setDescripation(String descripation) {
 		Descripation = descripation;
 	}
+	@Override
+	public String toString() {
+		return "Award [Id=" + Id + ", Employee=" + Employee + ", AwardType=" + AwardType + ", Gift=" + Gift + ", Date="
+				+ Date + ", Descripation=" + Descripation + "]";
+	}
+	
+	
+	
+
+	
+
 
 }
